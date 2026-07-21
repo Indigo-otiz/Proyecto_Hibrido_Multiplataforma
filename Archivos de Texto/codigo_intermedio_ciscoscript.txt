@@ -1,0 +1,62 @@
+CiscoScript - Código intermedio de tres direcciones
+====================================================
+
+T1 = dispositivo ROUTER, R1
+T2 = basica T1
+T3 = hostname T1, R1
+T4 = credencial admin, cisco123
+T5 = dominio T4, cisco.com
+T6 = ssh T1, T5
+T7 = puerto T1, g0/0
+T8 = ip T7, 192.168.1.1
+T9 = mascara T8, /24
+T10 = rango 192.168.1.1, 192.168.1.10
+T11 = excluir T1, T10
+T12 = pool T1, LAN1
+T13 = red T12, 192.168.1.0
+T14 = mascara T13, /24
+T15 = gateway T14, 192.168.1.1
+T16 = dns T15, 8.8.8.8
+T17 = dispositivo SWITCH, S1
+T18 = basica T17
+T19 = hostname T17, S1
+T20 = credencial admin, cisco123
+T21 = dominio T20, cisco.com
+T22 = ssh T17, T21
+T23 = vlan T17, 1
+T24 = nombre T23, ADMIN
+T25 = vlan T17, 10
+T26 = nombre T25, VENTAS
+T27 = administracion T17, 1
+T28 = ip T27, 192.168.1.2
+T29 = mascara T28, /24
+T30 = gateway T29, 192.168.1.1
+T31 = lista_interfaces {fa0/1; fa0/2; fa0/3; fa0/4; fa0/5; g0/2}
+T32 = puertos T17, T31
+T33 = acceso T32, 10
+T34 = ping T1, T17
+if T34 goto Label01
+goto Label02
+
+Label01:
+T35 = resultado_ping exitoso, R1->S1
+goto Label03
+
+Label02:
+T36 = resultado_ping fallido, R1->S1
+
+Label03:
+T37 = mostrar redes
+T38 = verificar programa
+if T38 goto Label04
+goto Label05
+
+Label04:
+T39 = resultado_verificacion correcto
+goto Label06
+
+Label05:
+T40 = resultado_verificacion con_errores
+
+Label06:
+FIN
