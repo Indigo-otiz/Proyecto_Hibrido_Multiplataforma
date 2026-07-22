@@ -73,7 +73,7 @@ end;
 procedure TFormaPrincipal.BitBtn2Click(Sender: TObject);
 begin
     try
-        ShellExecute(FormaLCD.handle,nil,pChar('https://drive.google.com/file/d/1tbeHQowYvVFI_CFOugaN8N-QdgtinWBK/view?usp=sharing'),nil,nil,sw_shownormal);
+        ShellExecute(FormaLCD.handle,nil,pChar('https://drive.google.com/file/d/1RG2YEWqMv7_hr_oGvsk8OZrWa-Dg01cr/view?usp=drivesdk'),nil,nil,sw_shownormal);
     except
           ShowMessage('No se ha el recurso');
     end;
