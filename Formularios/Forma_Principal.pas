@@ -46,7 +46,7 @@ uses Forma_LCD;
 procedure TFormaPrincipal.btnC3DClick(Sender: TObject);
 begin
     try
-        ShellExecute(FormaLCD.handle,nil,pChar('C:\Tec\7mo Semestre\Lenguajes y Autómatas II\Proyecto Híbrido Multiplataforma\Archivos de Texto\codigo_intermedio_ciscoscript.txt'),nil,nil,sw_shownormal);
+        ShellExecute(FormaLCD.handle,nil,pChar('..\..\Archivos de Texto\codigo_intermedio_ciscoscript.txt'),nil,nil,sw_shownormal);
     except
           ShowMessage('No se ha encontrado el archivo');
     end;
@@ -64,7 +64,7 @@ end;
 procedure TFormaPrincipal.btnSemanticoClick(Sender: TObject);
 begin
     try
-        ShellExecute(FormaLCD.handle,nil,pChar('C:\Tec\7mo Semestre\Lenguajes y Autómatas II\Proyecto Híbrido Multiplataforma\Archivos de Texto\reglas-semanticas.txt'),nil,nil,sw_shownormal);
+        ShellExecute(FormaLCD.handle,nil,pChar('..\..\Archivos de Texto\reglas-semanticas.txt'),nil,nil,sw_shownormal);
     except
           ShowMessage('No se ha encontrado el archivo');
     end;
@@ -82,7 +82,7 @@ end;
 procedure TFormaPrincipal.btnArbolEClick(Sender: TObject);
 begin
     try
-        ShellExecute(FormaLCD.handle,nil,pChar('C:\Tec\7mo Semestre\Lenguajes y Autómatas II\Proyecto Híbrido Multiplataforma\Árbol Expresiones Java\ArbolExpresiones.jar'),nil,nil,sw_shownormal);
+        ShellExecute(FormaLCD.handle,nil,'java',pChar('-jar "..\..\Árbol Expresiones Java\ArbolExpresiones.jar"'),nil,sw_shownormal);
     except
           ShowMessage('No se ha encontrado la App');
     end;
